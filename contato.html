@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Agil Sistemas</title>
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/logo-sem-texto.svg">
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/logo-sem-texto.svg">
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/logo-sem-texto.svg">
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/logo-sem-texto.svg">
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="assets/img/logo-sem-texto.svg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+<!-- Load Zooming library -->
+    <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
+
+    <script>
+      // Listen to images after DOM content is fully loaded
+      document.addEventListener('DOMContentLoaded', function () {
+        new Zooming({
+          // options...
+        }).listen('.img-zoomable')
+      })
+    </script>
+</head>
+
+<body style="font-family: Raleway, sans-serif;background: rgb(248,249,250);">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light barra-nav" id="container-navbar">
+        <div class="container"><a class="navbar-brand" href="index.html" style="background: url(&quot;assets/img/logo-cabecalho.svg&quot;) center / auto no-repeat;width: 130.3125px;height: 25px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-style: none;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="height: 51px;">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex justify-content-center align-items-center align-items-xl-center nav-item-hover" style="border-style: none;"><a class="nav-link justify-content-center align-items-center" onclick="transitionToPage(&#39;index.html&#39;)" href="index.html" style="border-style: none;">Início&nbsp;</a></li>
+                    <li class="nav-item d-flex justify-content-center align-items-center align-items-xl-center nav-item-hover" style="border-style: none;"><a class="nav-link justify-content-center" onclick="transitionToPage(&#39;agil-prime.html&#39;)" href="agil-prime.html" style="border-style: none;">Ágil Prime</a></li>
+                    <li class="nav-item d-flex justify-content-center align-items-center align-items-xl-center nav-item-hover" style="border-style: none;"><a class="nav-link" href="agil-cloud.html">Ágil Cloud</a></li>
+                    <li class="nav-item d-flex justify-content-center align-items-center align-items-xl-center nav-item-hover" style="border-style: none;"><a class="nav-link active" href="contato.html">Contato</a></li>
+                    <li class="nav-item d-flex justify-content-center align-items-center nav-item-hover" style="border-style: none;"><a class="nav-link" href="http://central.agil.ind.br/login">Central do Cliente</a></li>
+                    <li class="nav-item d-flex justify-content-center align-items-center" style="border-style: none;"><a class="nav-link" href="https://startcontrol.com/agilsistemas/start"><button class="btn text-center d-xl-flex align-items-xl-center" type="button" style="background: #fc6b1a;color: rgb(255,255,255);"><img src="assets/img/Icones/download-solid.svg" style="width: 23.266px;margin-right: 7px;filter: invert(100%);">BAIXAR SUPORTE</button></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-light anin-float-up-page" style="margin-top: 62px;background: rgb(248, 249, 250);">
+        <div class="container">
+            <div class="row row-conteudo" style="padding-bottom: 40px;background: var(--bs-gray-100);margin-top: 114px;">
+                <div class="col-lg-10 col-xl-10 col-xxl-8 offset-lg-1 offset-xl-1 offset-xxl-2 text-center text-md-start">
+                    <h1 class="text-center topico">Entre em contato</h1>
+                    <form action="enviar-email.php" method="post">
+                        <h4>Nome:</h4><input class="form-control mb-4" type="text" placeholder="ex.: Jose Carlos" name="nome" style="font-family: ABeeZee, sans-serif;">
+                        <h4>Email:</h4><input class="form-control mb-4" type="email" placeholder="ex.: josecarlos@email.com" name="email" style="font-family: ABeeZee, sans-serif;">
+                        <h4>Telefone / Whastapp:</h4><input class="form-control" type="text" id="phone" name="telefone" placeholder="(47) 12345-5432" style="font-family: ABeeZee, sans-serif;margin-bottom: 24px;">
+                        <h4>Diga-nos como podemos ajudar!</h4><textarea class="form-control mb-4" name="comentario" style="font-family: ABeeZee, sans-serif;"></textarea>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-1"><button class="btn btn-primary" id="botao-enviar" type="submit" onclick="mostrarEnviando()">Enviar</button></div>
+                                <div class="col">
+                                    <div id="div-pai-diov-enviando" class="d-inline-block">
+                                        <div id="div-enviando" class="d-none"><span id="textoEnviando" style="margin-left: 12px;/*display: none;*/font-weight: bold;font-style: italic;">Enviando...</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <hr style="margin-top: 32px;">
+                    <div style="margin-top: 49px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.4326451465051!2d-49.601417819503986!3d-27.415333514236195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df915b790f399b%3A0x4c582cfcdd38d487!2sR.%20Quatorze%20de%20Fevereiro%20-%20Centro%2C%20Ituporanga%20-%20SC%2C%2088400-000!5e0!3m2!1spt-BR!2sbr!4v1636675067524!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:1px solid grey; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-dark" style="padding-top: 18px;padding-bottom: 18px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-2 d-xl-flex justify-content-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center align-items-xxl-center item"><a class=".limpar-link" href="index.html" style="border-style: none;text-decoration: none;">
+                        <div class="text-center" style="padding-top: 4px;"><img src="assets/img/logo-sem-texto.svg" style="width: 62px;"><br>
+                            <p class=".paragrafo-rodape" style="color: white;">© Ágil Sistemas 2021<br></p>
+                        </div>
+                    </a></div>
+                <div class="col-12 col-md-6 col-xl-6 col-xxl-8 d-flex justify-content-center align-items-center align-items-xl-center align-items-xxl-center item social">
+                    <div class="text-center"><a href="https://www.facebook.com/agilsistemasbr/" target="_blank"><img class="d-inline-flex" src="assets/img/facebook-square-brands.svg" style="filter: invert(100%) sepia(0%);height: 51.562px;margin-right: 8px;margin-bottom: 8px;"></a><a href="https://www.instagram.com/agilsistemasoficial/" target="_blank"><img class="d-inline-flex" src="assets/img/instagram-square-brands.svg" style="filter: invert(100%) sepia(0%);height: 51.562px;margin-right: 8px;margin-bottom: 8px;"></a><a href="https://twitter.com/agil_oficial" target="_blank"><img class="d-inline-flex" src="assets/img/twitter-square-brands.svg" style="filter: invert(100%) sepia(0%);height: 51.562px;margin-right: 8px;margin-bottom: 8px;"></a><a href="https://api.whatsapp.com/send?phone=5547992223036" target="_blank"><img class="d-inline-flex" src="assets/img/whatsapp-square-brands.svg" style="filter: invert(100%) sepia(0%);height: 51.562px;margin-right: 8px;margin-bottom: 8px;"></a></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-2 d-xxl-flex justify-content-sm-center justify-content-md-end" style="font-size: 13px;">
+                    <div class="text-center text-sm-center text-md-end text-lg-end text-xl-end text-xxl-end">
+                        <p class="text-md-end text-lg-end">vendas@agil.ind.br<br></p>
+                        <p class="text-md-end text-lg-end" style="margin-top: -9px;font-family: Arial;font-size: 13px;">(47) 9 9222-3034 / 3042&nbsp;<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/notify.js"></script>
+</body>
+
+</html>
